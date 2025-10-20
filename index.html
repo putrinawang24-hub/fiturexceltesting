@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografis Interaktif - Olah Data Excel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --excel-green: #107c41;
+            --excel-green-dark: #0f6d39;
+            --excel-green-light: #e2efd9;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .card-header {
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .tip {
+            background-color: var(--excel-green-light);
+            border-left: 4px solid var(--excel-green);
+        }
+        kbd {
+            background-color: #f3f4f6;
+            border: 1px solid #d1d5db;
+            border-radius: 0.25rem;
+            padding: 0.125rem 0.375rem;
+            font-family: monospace;
+            font-weight: 600;
+        }
+        .highlight {
+            background-color: #fef08a; /* yellow-200 */
+            border-radius: 0.25rem;
+        }
+        #practice-table td[contenteditable="true"]:focus {
+            outline: 2px solid #3b82f6; /* blue-500 */
+            background-color: #eff6ff; /* blue-50 */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto px-4 py-12">
+        <!-- Header -->
+        <header class="text-center mb-12 bg-[var(--excel-green)] text-white p-8 rounded-xl shadow-lg">
+            <h1 class="text-4xl md:text-5xl font-bold">4 Jurus Cepat Olah Data di Excel</h1>
+            <p class="mt-4 text-lg text-green-100 max-w-2xl mx-auto">Ubah tumpukan data berantakan menjadi informasi berharga dengan 4 fitur andalan!</p>
+        </header>
+
+        <!-- Grid of Cards -->
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Card 1: SORT -->
+            <div class="card">
+                <div class="card-header p-6 bg-gray-50">
+                    <h2 class="text-3xl font-bold text-[var(--excel-green)]">1. SORT (Mengurutkan) <span class="text-4xl">🧹</span></h2>
+                </div>
+                <div class="p-6 space-y-4">
+                    <blockquote class="border-l-4 border-gray-300 pl-4 italic text-gray-700">"Merapikan dan mengurutkan data Anda secara logis."</blockquote>
+                    <p>Mengatur baris berdasarkan urutan A-Z, Z-A, terkecil ke terbesar, atau tanggal.</p>
+                    
+                    <div class="mt-4">
+                        <h3 class="font-bold text-lg mb-2">Lokasi & Cara Penggunaan:</h3>
+                        <img src="https://placehold.co/500x100/E2EFD9/107C41?text=Tab+Data+>+Grup+Sort+%26+Filter" alt="Lokasi Fitur Sort di Excel" class="w-full rounded-lg border border-gray-200 mb-4 shadow-sm" onerror="this.onerror=null;this.src='https://placehold.co/500x100/cccccc/ffffff?text=Image+Not+Found';">
+                        <ol class="list-decimal list-inside space-y-1 text-gray-600">
+                            <li>Klik di mana saja di dalam tabel data Anda.</li>
+                            <li>Buka tab <strong>Data</strong>.</li>
+                            <li>Di grup 'Sort & Filter', klik ikon <strong>A-Z</strong> (Ascending) atau <strong>Z-A</strong> (Descending).</li>
+                            <li>Untuk pengaturan lebih lanjut (multi-kolom), klik tombol <strong>Sort</strong>.</li>
+                        </ol>
+                    </div>
+
+                    <div class="tip p-4 rounded-md">
+                        <p class="text-green-900"><span class="font-bold">⭐ Tips Ahli:</span> Gunakan tombol <strong>Sort</strong> utama untuk mengurutkan berdasarkan beberapa kolom sekaligus.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2: FILTER -->
+            <div class="card">
+                <div class="card-header p-6 bg-gray-50">
+                    <h2 class="text-3xl font-bold text-[var(--excel-green)]">2. FILTER (Menyaring) <span class="text-4xl">🎯</span></h2>
+                </div>
+                <div class="p-6 space-y-4">
+                    <blockquote class="border-l-4 border-gray-300 pl-4 italic text-gray-700">"Fokus hanya pada data yang Anda butuhkan."</blockquote>
+                    <p>Menyembunyikan baris yang tidak relevan, hanya menampilkan data sesuai kriteria.</p>
+
+                     <div class="mt-4">
+                        <h3 class="font-bold text-lg mb-2">Lokasi & Cara Penggunaan:</h3>
+                        <img src="https://placehold.co/500x100/E2EFD9/107C41?text=Tab+Data+>+Grup+Sort+%26+Filter" alt="Lokasi Fitur Filter di Excel" class="w-full rounded-lg border border-gray-200 mb-4 shadow-sm" onerror="this.onerror=null;this.src='https://placehold.co/500x100/cccccc/ffffff?text=Image+Not+Found';">
+                        <ol class="list-decimal list-inside space-y-1 text-gray-600">
+                           <li>Klik di mana saja di dalam tabel data Anda.</li>
+                           <li>Buka tab <strong>Data</strong>.</li>
+                           <li>Klik ikon <strong>Filter</strong> (berbentuk corong).</li>
+                           <li>Tombol panah bawah akan muncul di setiap judul kolom. Klik untuk memilih kriteria.</li>
+                        </ol>
+                    </div>
+
+                     <div class="tip p-4 rounded-md">
+                        <p class="text-green-900"><span class="font-bold">⭐ Tips Ahli:</span> `Copy-paste` hasil filter ke sheet baru untuk membuat laporan ringkas secara instan.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3: FIND -->
+            <div class="card">
+                <div class="card-header p-6 bg-gray-50">
+                    <h2 class="text-3xl font-bold text-[var(--excel-green)]">3. FIND (Menemukan) <span class="text-4xl">🔍</span></h2>
+                </div>
+                <div class="p-6 space-y-4">
+                    <blockquote class="border-l-4 border-gray-300 pl-4 italic text-gray-700">"Menemukan 'jarum di tumpukan jerami' dalam sekejap."</blockquote>
+                    <p>Mencari teks atau angka spesifik di dalam worksheet.</p>
+
+                     <div class="mt-4">
+                        <h3 class="font-bold text-lg mb-2">Lokasi & Cara Penggunaan:</h3>
+                        <img src="https://placehold.co/500x100/E2EFD9/107C41?text=Tab+Home+>+Grup+Editing" alt="Lokasi Fitur Find di Excel" class="w-full rounded-lg border border-gray-200 mb-4 shadow-sm" onerror="this.onerror=null;this.src='https://placehold.co/500x100/cccccc/ffffff?text=Image+Not+Found';">
+                        <ol class="list-decimal list-inside space-y-1 text-gray-600">
+                           <li>Buka tab <strong>Home</strong>, atau tekan <kbd>Ctrl</kbd> + <kbd>F</kbd>.</li>
+                           <li>Di ujung kanan, klik <strong>Find & Select</strong> (ikon teropong).</li>
+                           <li>Pilih <strong>Find...</strong></li>
+                           <li>Ketik teks yang ingin dicari, lalu klik <strong>Find Next</strong> atau <strong>Find All</strong>.</li>
+                        </ol>
+                    </div>
+
+                     <div class="tip p-4 rounded-md">
+                        <p class="text-green-900"><span class="font-bold">⭐ Tips Ahli:</span> Klik `Find All` untuk melihat daftar lengkap lokasi data yang Anda cari.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4: REPLACE -->
+            <div class="card">
+                <div class="card-header p-6 bg-gray-50">
+                    <h2 class="text-3xl font-bold text-[var(--excel-green)]">4. REPLACE (Mengganti) <span class="text-4xl">🔄</span></h2>
+                </div>
+                <div class="p-6 space-y-4">
+                    <blockquote class="border-l-4 border-gray-300 pl-4 italic text-gray-700">"Memperbaiki banyak kesalahan data dengan satu klik."</blockquote>
+                    <p>Menemukan nilai lalu menggantinya dengan nilai baru secara massal.</p>
+                    
+                    <div class="mt-4">
+                        <h3 class="font-bold text-lg mb-2">Lokasi & Cara Penggunaan:</h3>
+                        <img src="https://placehold.co/500x100/E2EFD9/107C41?text=Tab+Home+>+Grup+Editing" alt="Lokasi Fitur Replace di Excel" class="w-full rounded-lg border border-gray-200 mb-4 shadow-sm" onerror="this.onerror=null;this.src='https://placehold.co/500x100/cccccc/ffffff?text=Image+Not+Found';">
+                        <ol class="list-decimal list-inside space-y-1 text-gray-600">
+                           <li>Buka tab <strong>Home</strong>, atau tekan <kbd>Ctrl</kbd> + <kbd>H</kbd>.</li>
+                           <li>Klik <strong>Find & Select</strong> (ikon teropong).</li>
+                           <li>Pilih <strong>Replace...</strong></li>
+                           <li>Isi 'Find what' dengan teks lama dan 'Replace with' dengan teks baru.</li>
+                           <li>Klik <strong>Replace All</strong> untuk mengganti semua sekaligus.</li>
+                        </ol>
+                    </div>
+
+                    <div class="tip p-4 rounded-md">
+                        <p class="text-green-900"><span class="font-bold">⭐ Tips Ahli:</span> **Hati-hati!** Gunakan `Find All` sebelum `Replace All` untuk memastikan tidak ada data yang salah ganti.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Interactive Practice Section -->
+        <section id="practice-section" class="mt-16">
+            <div class="card p-6 md:p-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[var(--excel-green)]">Praktik Langsung 🚀</h2>
+                    <p class="mt-2 text-gray-600">Coba sendiri fitur-fitur Excel di bawah ini! Anda bisa mengedit isi tabel.</p>
+                </div>
+
+                <!-- Practice Table -->
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left text-gray-500" id="practice-table">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                            <tr>
+                                <th scope="col" class="px-6 py-3">Nama Pelanggan</th>
+                                <th scope="col" class="px-6 py-3">Produk</th>
+                                <th scope="col" class="px-6 py-3">Jumlah</th>
+                                <th scope="col" class="px-6 py-3">Tanggal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b">
+                                <td class="px-6 py-4" contenteditable="true">Budi</td><td class="px-6 py-4" contenteditable="true">Buku</td><td class="px-6 py-4" contenteditable="true">5</td><td class="px-6 py-4" contenteditable="true">20-10-2025</td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                                <td class="px-6 py-4" contenteditable="true">Ani</td><td class="px-6 py-4" contenteditable="true">Pensil</td><td class="px-6 py-4" contenteditable="true">10</td><td class="px-6 py-4" contenteditable="true">20-10-2025</td>
+                            </tr>
+                             <tr class="bg-white border-b">
+                                <td class="px-6 py-4" contenteditable="true">Citra</td><td class="px-6 py-4" contenteditable="true">Buku</td><td class="px-6 py-4" contenteditable="true">3</td><td class="px-6 py-4" contenteditable="true">21-10-2025</td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                                <td class="px-6 py-4" contenteditable="true">Budi</td><td class="px-6 py-4" contenteditable="true">Pulpen</td><td class="px-6 py-4" contenteditable="true">7</td><td class="px-6 py-4" contenteditable="true">21-10-2025</td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                                <td class="px-6 py-4" contenteditable="true">Dedi</td><td class="px-6 py-4" contenteditable="true">Pensil</td><td class="px-6 py-4" contenteditable="true">12</td><td class="px-6 py-4" contenteditable="true">22-10-2025</td>
+                            </tr>
+                             <tr class="bg-white border-b">
+                                <td class="px-6 py-4" contenteditable="true">Ani</td><td class="px-6 py-4" contenteditable="true">Penggaris</td><td class="px-6 py-4" contenteditable="true">2</td><td class="px-6 py-4" contenteditable="true">22-10-2025</td>
+                            </tr>
+                             <tr class="bg-white">
+                                <td class="px-6 py-4" contenteditable="true">Budi</td><td class="px-6 py-4" contenteditable="true">Buku</td><td class="px-6 py-4" contenteditable="true">4</td><td class="px-6 py-4" contenteditable="true">23-10-2025</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Controls -->
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Sort Controls -->
+                    <div class="space-y-3">
+                        <h4 class="font-bold text-lg text-gray-800">1. Sort</h4>
+                        <button id="sort-name-asc" class="w-full bg-[var(--excel-green)] hover:bg-[var(--excel-green-dark)] text-white font-bold py-2 px-4 rounded transition-colors">Nama (A → Z)</button>
+                        <button id="sort-name-desc" class="w-full bg-[var(--excel-green)] hover:bg-[var(--excel-green-dark)] text-white font-bold py-2 px-4 rounded transition-colors">Nama (Z → A)</button>
+                        <button id="sort-qty-asc" class="w-full bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded transition-colors">Jumlah (Kecil → Besar)</button>
+                        <button id="sort-qty-desc" class="w-full bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded transition-colors">Jumlah (Besar → Kecil)</button>
+                    </div>
+                    <!-- Filter Controls -->
+                    <div class="space-y-3">
+                        <h4 class="font-bold text-lg text-gray-800">2. Filter</h4>
+                        <input type="text" id="filter-input" placeholder="Filter berdasarkan produk..." class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[var(--excel-green)]">
+                        <button id="filter-btn" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition-colors">Filter</button>
+                        <button id="reset-filter-btn" class="w-full bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded transition-colors">Reset Filter</button>
+                    </div>
+                    <!-- Find Controls -->
+                     <div class="space-y-3">
+                        <h4 class="font-bold text-lg text-gray-800">3. Find</h4>
+                        <input type="text" id="find-input" placeholder="Cari kata apa saja..." class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[var(--excel-green)]">
+                        <button id="find-btn" class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded transition-colors">Cari</button>
+                        <button id="clear-find-btn" class="w-full bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded transition-colors">Hapus Sorotan</button>
+                    </div>
+                    <!-- Replace Controls -->
+                    <div class="space-y-3">
+                         <h4 class="font-bold text-lg text-gray-800">4. Replace</h4>
+                        <input type="text" id="replace-find-input" placeholder="Kata yang dicari" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[var(--excel-green)]">
+                        <input type="text" id="replace-with-input" placeholder="Ganti dengan kata ini" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[var(--excel-green)]">
+                        <button id="replace-btn" class="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded transition-colors">Ganti Semua</button>
+                    </div>
+                </div>
+                 <div id="feedback-message" class="text-center mt-6 font-semibold h-6"></div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center mt-12">
+            <h3 class="text-2xl font-bold text-[var(--excel-green)]">Kuasai Keempatnya, Kuasai Datamu!</h3>
+        </footer>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tableBody = document.querySelector('#practice-table tbody');
+            const feedbackMessage = document.getElementById('feedback-message');
+
+            // --- SORT LOGIC ---
+            const sortTable = (columnIndex, direction) => {
+                const rows = Array.from(tableBody.querySelectorAll('tr'));
+                const sortedRows = rows.sort((a, b) => {
+                    const aText = a.querySelector(`td:nth-child(${columnIndex + 1})`).textContent.trim();
+                    const bText = b.querySelector(`td:nth-child(${columnIndex + 1})`).textContent.trim();
+                    const aValue = isNaN(parseFloat(aText)) ? aText.toLowerCase() : parseFloat(aText);
+                    const bValue = isNaN(parseFloat(bText)) ? bText.toLowerCase() : parseFloat(bText);
+
+                    if (aValue < bValue) return direction === 'asc' ? -1 : 1;
+                    if (aValue > bValue) return direction === 'asc' ? 1 : -1;
+                    return 0;
+                });
+
+                tableBody.innerHTML = '';
+                sortedRows.forEach(row => tableBody.appendChild(row));
+                showFeedback('Tabel berhasil diurutkan!');
+            };
+
+            document.getElementById('sort-name-asc').addEventListener('click', () => sortTable(0, 'asc'));
+            document.getElementById('sort-name-desc').addEventListener('click', () => sortTable(0, 'desc'));
+            document.getElementById('sort-qty-asc').addEventListener('click', () => sortTable(2, 'asc'));
+            document.getElementById('sort-qty-desc').addEventListener('click', () => sortTable(2, 'desc'));
+
+
+            // --- FILTER LOGIC ---
+            const filterTable = () => {
+                const filterText = document.getElementById('filter-input').value.toLowerCase();
+                const rows = tableBody.querySelectorAll('tr');
+                let found = 0;
+                rows.forEach(row => {
+                    const productCell = row.querySelector('td:nth-child(2)').textContent.toLowerCase();
+                    if (productCell.includes(filterText)) {
+                        row.style.display = '';
+                        found++;
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+                 showFeedback(`${found} data ditampilkan.`);
+            };
+            document.getElementById('filter-btn').addEventListener('click', filterTable);
+            document.getElementById('reset-filter-btn').addEventListener('click', () => {
+                document.getElementById('filter-input').value = '';
+                tableBody.querySelectorAll('tr').forEach(row => row.style.display = '');
+                 showFeedback('Filter direset.');
+            });
+
+            // --- FIND LOGIC ---
+            const clearHighlight = () => {
+                tableBody.querySelectorAll('td').forEach(cell => {
+                    cell.innerHTML = cell.textContent; // This removes the span wrapper
+                });
+            };
+
+            const findInTable = () => {
+                clearHighlight();
+                const findText = document.getElementById('find-input').value.trim();
+                if (!findText) return;
+
+                let count = 0;
+                tableBody.querySelectorAll('td').forEach(cell => {
+                    const cellText = cell.textContent;
+                    const regex = new RegExp(`(${findText})`, 'gi');
+                    if (cellText.match(regex)) {
+                        count++;
+                        cell.innerHTML = cellText.replace(regex, `<span class="highlight">$1</span>`);
+                    }
+                });
+                showFeedback(`${count} hasil ditemukan.`);
+            };
+
+            document.getElementById('find-btn').addEventListener('click', findInTable);
+            document.getElementById('clear-find-btn').addEventListener('click', () => {
+                clearHighlight();
+                document.getElementById('find-input').value = '';
+                showFeedback('Sorotan dihapus.');
+            });
+
+            // --- REPLACE LOGIC ---
+            const replaceInTable = () => {
+                const findText = document.getElementById('replace-find-input').value.trim();
+                const replaceText = document.getElementById('replace-with-input').value;
+                if (!findText) {
+                    showFeedback('Masukkan kata yang ingin dicari.', true);
+                    return;
+                }
+
+                let replacements = 0;
+                tableBody.querySelectorAll('td').forEach(cell => {
+                    const oldText = cell.textContent;
+                    if (oldText.includes(findText)) {
+                        const originalText = cell.textContent;
+                        const newText = originalText.replaceAll(findText, replaceText);
+                         if(originalText !== newText){
+                             cell.textContent = newText;
+                             replacements++;
+                         }
+                    }
+                });
+                showFeedback(`${replacements} kata berhasil diganti.`);
+            };
+            document.getElementById('replace-btn').addEventListener('click', replaceInTable);
+
+            // --- FEEDBACK ---
+            let timeoutId;
+            function showFeedback(message, isError = false) {
+                clearTimeout(timeoutId);
+                feedbackMessage.textContent = message;
+                feedbackMessage.className = isError 
+                    ? 'text-center mt-6 font-semibold h-6 text-red-600' 
+                    : 'text-center mt-6 font-semibold h-6 text-green-700';
+                timeoutId = setTimeout(() => {
+                    feedbackMessage.textContent = '';
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>
+
